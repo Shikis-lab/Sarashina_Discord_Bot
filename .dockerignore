@@ -1,0 +1,24 @@
+# Git
+.git/
+.github/
+
+# Environment and sensitive data
+.env*
+data/
+*.log
+
+# Build outputs
+build/
+bin/
+out/
+CMakeFiles/
+CMakeCache.txt
+
+# OS & Editor files
+.DS_Store
+.vscode/
+.idea/
+
+# Documentation & Misc
+README.md
+compose.yaml

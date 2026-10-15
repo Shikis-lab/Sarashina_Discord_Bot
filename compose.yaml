@@ -1,0 +1,16 @@
+services:
+  bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - DISCORD_BOT_TOKEN=${DISCORD_BOT_TOKEN}
+      - SARASHINA_API_KEY=${SARASHINA_API_KEY}
+      - SARASHINA_MODEL=${SARASHINA_MODEL:-sarashina3-mini}
+      - SARASHINA_SYSTEM_PROMPT=${SARASHINA_SYSTEM_PROMPT:-}
+      - ALLOWED_CHANNEL_ID=${ALLOWED_CHANNEL_ID:-0}
+    volumes:
+      - ./data:/app/data
